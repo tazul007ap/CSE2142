@@ -15,8 +15,7 @@ if (args[0].equals("l")) {
 System.out.println("Loading data ...");
 try {
     BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("employees.txt")));
-    String line = reader.readLine();
-    String employees[] = line.split(",");
+    String employees[] = reader.readLine().split(",");
       for (String emp : employees) {
 System.out.println(emp);
 }
@@ -71,8 +70,7 @@ catch (Exception employees) {}
     System.out.println("Loading data ...");
 try {
     BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("employees.txt")));
-    String line = reader.readLine();
-    char[] chars = line.toCharArray();
+    char[] chars = reader.readLine().toCharArray();
     boolean inWord = false;
     int count = 0;
      for (char c : chars) {
@@ -94,8 +92,7 @@ if (c == ' ') {
     System.out.println("Loading data ...");
 try {
     BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("employees.txt")));
-    String line = reader.readLine();
-    String employees[] = line.split(",");
+    String employees[] = reader.readLine().split(",");
     String name = args[0].substring(1);
      for (int i = 0; i < employees.length; i++) {
 if (employees[i].equals(name)) {
